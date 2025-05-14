@@ -153,7 +153,7 @@ export class LinkedList {
         let previousNode = null
         let count = 0
 
-        if (index < 0) return "Negative index not allowed"
+        if (index < 0) console.log("Negative index not allowed")
 
         while(currentNode.nextNode !== null) {
             if (count === index) break
@@ -163,7 +163,7 @@ export class LinkedList {
             count++
         }
 
-        if (index > count) return "Index out of bounds"
+        if (index > count) console.log("Index out of bounds")
 
         if (currentNode.nextNode === null) {
             previousNode.nextNode = null
@@ -183,6 +183,7 @@ export class LinkedList {
 
         string += `( ${currentNode.value} ) -> null`
         console.log(string)
+        return string
     }
 }
 
